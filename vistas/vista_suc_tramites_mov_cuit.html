@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mov.Sucursales</title>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+<form name="datos_bas" id="datos_bas">
+	
+
+
+
+<fieldset>Historial de Movimientos-Sucursales-Cuit</fieldset>
+	
+</form>
+
+
+
+<table class="table table-striped table-hover">
+                    
+                    <tr>
+                      <th>#</th>
+                      <th>Fecha Movimiento</th>
+                      <th>Cuit Contribuyente</th>
+                      <th>Id Sucursal</th>
+                      <th>Tipo Cambio</th>
+                      <th></th>
+                    </tr>
+                    <?php foreach ($resultado as $result ) { ?>
+                    <tr>
+                      <td><?php echo $result['id_sucursal_mov']; ?></td>
+                      <td><?php echo $result['fecha_tramite']; ?></td>
+                      <td><?php echo $result['cuit_contrib']; ?></td>
+                      <td><?php echo $result['id_sucursal']; ?></td>
+                      <td><?php echo $result['tramite_tipo']; ?></td>
+                      
+
+                      
+                      <!--<td><a class="btn btn-success" href="../controladores/revsolicitud1.php?id=<?php echo $result['cod_solicitud']; ?>" target="_blank">Ver +</a> </td>-->
+
+
+
+                     <!-- <td><button value="mod" id="bot_mod" onclick="mostrar_mod()">Modificar Suc</button></td>     -->
+
+
+                    </tr>
+                  
+                    <?php } ?>
+
+
+                    <?php if ($resultado != null) {?>
+
+                    <td><a class="btn btn-success" href="../index.php" >Volver atras</a></td>
+                    
+                    <td><button value="alta" id="bot_fecha" onclick="mostrar_fecha()">Imprimir</button></td>
+                	
+                	  <?php   }  ?> 
+
+                    <?php if ($resultado == null) {?>
+
+                    <td><a class="btn btn-success" href="../index.php" >Volver atras</a></td>
+                    
+                  
+                    <?php   }  ?> 
+
+                
+
+          
+</table>
+
+
+
+
+
+
+</body>
+</html>

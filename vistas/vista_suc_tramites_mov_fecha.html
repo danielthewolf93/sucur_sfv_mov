@@ -21,7 +21,7 @@
 
 
 
-<fieldset>Historial de Movimientos-Sucursales</fieldset>
+<fieldset>Historial de Movimientos-Sucursales-Fecha-Desde:<?php echo $fechadesde; ?>-Hasta:<?php echo $fechahasta; ?> </fieldset>
 	
 </form>
 
@@ -60,65 +60,13 @@
 
                     <?php if ($resultado != null) {?>
 
-                    <td><button value="alta" id="bot_contr" onclick="mostrar_contr()">Busqueda por contribuyente</button></td>
-                    <td><button value="alta" id="bot_fecha" onclick="mostrar_fecha()">Busqueda por Fecha</button></td>
+                    <td><a class="btn btn-success" href="../index.php" >Volver atras</a></td>
+                    
+                    <td><button value="alta" id="bot_fecha" onclick="mostrar_fecha()">Imprimir</button></td>
                 	
                 	<?php   }  ?> 
           
 </table>
-
-
-<!--
-
-
-	<button value="alta" id="bot_alta" onclick="mostrar_alta()">Agregar Suc</button>
-	<button value="mod" id="bot_mod" onclick="mostrar_mod()">Modificar Suc</button>
-	<button value="baja" id="bot_baja" onclick="mostrar_baja()">Borrar Suc</button>
-
--->
-
-<div id="agreg_suc" style="display:none">
-
-	<form onsubmit="return validar1()"   action="controladores/buscar_mov_cuit.php" method="GET" name="agreg_suc" >
-
-			<label for="cuit_cont">Cuit Contribuyente</label>
-			<input type="number" name="cuit_cont" id="cuit_cont" required>
-
-			<button id="alta1" type="submit">Buscar</button>
-
-
-	</form>
-
-</div>
-
-
-<div id="mod_suc" style="display:none">
-	
-	<form onsubmit="return validar1()"   action="controladores/buscar_mov_fecha.php" method="GET" name="mod_suc" >
-
-			
-
-			<label for="calle_alt">Desde</label>
-			<input type="date" name="fecha_desde" id="fecha_desde" required>
-
-			<label for="calle_alt">Hasta</label>
-			<input type="date" name="fecha_hasta" id="fecha_hasta" required>
-
-
-			<button id="alta1" type="submit">Buscar</button>
-
-
-	</form>
-
-
-</div>
-
-
-
-
-
-
-<script type="text/javascript" src="js/func_mov_suc.js"></script>
 
 
 </body>
