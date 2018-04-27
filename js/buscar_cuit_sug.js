@@ -34,7 +34,12 @@ $(document).ready(function(){
                         //---------------------------------                                                 
                           $("#resultado").empty();
                           $("#resultado").append(data);
-                                                             
+                          
+
+                          
+                          /*Probando esto
+                           
+                         */                             
                     }
               });
                                                                                   
