@@ -36,7 +36,7 @@ $(document).ready(function(){
                           $("#resultado").append(data);
                           
 
-                          
+
                           /*Probando esto
                            
                          */                             
