@@ -40,7 +40,7 @@
 		                        $nombre = $res['pad_nombre_propietario'];
 		                        $id = $res['pad_cuit_index'];
 		                         
-		                        echo $nombre." ".$id."<br /><br />";    
+		                        echo $nombre."/ "."<b>".$id."</b>"."<br /><br />";    
 		                  									}
 		            	}
 		  }
